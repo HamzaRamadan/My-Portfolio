@@ -41,7 +41,7 @@ const CV = () => {
             </a>
             <a
               href={cvFile}
-              download="Ahmed_Abdelgwad_CV.pdf"
+              download="Hamza_Ramadan_CV.pdf"
               className="btn-secondary flex items-center justify-center space-x-2"
             >
               <FaDownload size={20} />

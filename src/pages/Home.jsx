@@ -1,110 +1,61 @@
-import React, { useState } from 'react'
-import { Link } from 'react-router-dom'
-import { motion } from 'framer-motion'
-import { FaGithub, FaWhatsapp, FaReact, FaCode, FaChartBar, FaMobile, FaDesktop, FaQuoteLeft, FaFacebook, FaHeadset } from 'react-icons/fa'
-import { FaHandsHelping } from 'react-icons/fa'
-import PageWrapper from '../components/PageWrapper'
-import Footer from '../components/Footer'
-import profileImage from '../assets/ahmed.jpg.jpg'
-
+import React, { useState } from "react";
+import { Link } from "react-router-dom";
+import { motion } from "framer-motion";
+import {
+  FaGithub,
+  FaWhatsapp,
+  FaReact,
+  FaCode,
+  FaChartBar,
+  FaMobile,
+  FaDesktop,
+  FaQuoteLeft,
+  FaFacebook,
+  FaHeadset,
+} from "react-icons/fa";
+import { FaHandsHelping } from "react-icons/fa";
+import PageWrapper from "../components/PageWrapper";
+import Footer from "../components/Footer";
+import profileImage from "../assets/my-pic.jpeg";
+import Main from "../components/Projects/Projects";
 
 const Home = () => {
   const services = [
     {
       icon: FaReact,
-      title: 'React Development',
-      description: 'Building modern, interactive web applications using React.js and latest technologies.'
+      title: "React Development",
+      description:
+        "Building modern, interactive web applications using React.js and latest technologies.",
     },
     {
       icon: FaCode,
-      title: 'Frontend Development',
-      description: 'Creating responsive, pixel-perfect user interfaces with HTML5, CSS3, and JavaScript.'
+      title: "Frontend Development",
+      description:
+        "Creating responsive, pixel-perfect user interfaces with HTML5, CSS3, and JavaScript.",
     },
-    {
-      icon: FaChartBar,
-      title: 'Dashboard Development',
-      description: 'Designing and developing admin panels and data visualization dashboards.'
-    },
+
     {
       icon: FaMobile,
-      title: 'Mobile Responsive',
-      description: 'Ensuring your website looks perfect on all devices and screen sizes.'
+      title: "Mobile Responsive",
+      description:
+        "Ensuring your website looks perfect on all devices and screen sizes.",
     },
-    {
-      icon: FaDesktop,
-      title: 'UI/UX Design',
-      description: 'Creating beautiful, user-friendly interfaces that enhance user experience.'
-    },
-    {
-      icon: FaHeadset,
-      title: 'Customer Support Anytime',
-      description: '24/7 support available to address any concerns or issues with your website or application.'
-    },
-    {
-      icon: FaQuoteLeft,
-      title: 'Customer Feedback',
-      description: 'We value your feedback and continuously improve our services based on client suggestions and needs.'
-    }
-  ]
+  ];
 
   const skills = [
-    'React.js', 'JavaScript', 'TypeScript', 'HTML5', 'CSS3', 'Tailwind CSS',
-    'Bootstrap', 'Firebase', 'MongoDB', 'Node.js', 'Git', 'GitHub'
-  ]
-
-  const testimonials = [
-    {
-      name: 'Sarah Johnson',
-      country: 'UAE',
-      image: 'https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=150&h=150&fit=crop&crop=face',
-      opinion: 'Ahmed delivered an exceptional React dashboard for our company. His attention to detail and technical expertise exceeded our expectations.'
-    },
-    {
-      name: 'Mohammed Al-Rashid',
-      country: 'KSA',
-      image: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=150&h=150&fit=crop&crop=face',
-      opinion: 'Working with Ahmed was a pleasure. He created a beautiful, responsive website that perfectly captured our brand vision.'
-    },
-    {
-      name: 'Ahmad Al-Fawaz',
-      country: 'Bahrain',
-      image: 'https://images.unsplash.com/photo-1566753323558-f4e0952af115?w=150&h=150&fit=crop&crop=face',
-      opinion: 'The website Ahmed developed for my business has significantly increased our online presence. His work is both beautiful and functional.'
-    },
-    {
-      name: 'Rami Khalil',
-      country: 'Jordan',
-      image: 'https://images.unsplash.com/photo-1542909168-82c3e7fdca5c?w=150&h=150&fit=crop&crop=face',
-      opinion: 'Ahmed\'s attention to detail and commitment to delivering quality work made our collaboration a great success. I will definitely work with him again.'
-    },
-    {
-      name: 'Ali Al-Jubouri',
-      country: 'Iraq',
-      image: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=150&h=150&fit=crop&crop=face',
-      opinion: 'His technical skills combined with excellent communication made the development process smooth and efficient. The final product was exactly what we needed.'
-    }
-  ]
-
-  const socialLinks = [
-    {
-      name: 'WhatsApp',
-      icon: FaWhatsapp,
-      url: 'https://wa.me/1234567890',
-      color: 'bg-green-600 hover:bg-green-700'
-    },
-    {
-      name: 'Facebook',
-      icon: FaFacebook,
-      url: 'http://facebook.com/CodeCrestDesign',
-      color: 'bg-blue-600 hover:bg-blue-700'
-    },
-    {
-      name: 'Khamsat',
-      icon: FaHandsHelping,
-      url: 'https://khamsat.com/programming/custom-website-development/2959182-انشاء-وتصميم-المواقع-الإلكترونية',
-      color: 'bg-green-500 hover:bg-green-600'
-    }
-  ]
+    "React.js",
+    "JavaScript",
+    "Next.js",
+    "TypeScript",
+    "jQuery",
+    "HTML5",
+    "CSS3",
+    "Sass",
+    "Tailwind CSS",
+    "Bootstrap",
+    "Redux",
+    "GitHub",
+  ];
 
   return (
     <PageWrapper>
@@ -112,7 +63,7 @@ const Home = () => {
       <section className="relative min-h-screen flex items-center justify-center bg-gradient-to-br from-primary-600 via-purple-600 to-pink-600 dark:from-primary-800 dark:via-purple-800 dark:to-pink-800">
         <div className="absolute inset-0 bg-black/20" />
         <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent" />
-        
+
         <div className="relative z-10 text-center text-white px-4 sm:px-6 lg:px-8">
           <motion.h1
             initial={{ opacity: 0, y: 50 }}
@@ -120,9 +71,9 @@ const Home = () => {
             transition={{ duration: 0.8 }}
             className="text-5xl md:text-7xl lg:text-8xl font-bold mb-6"
           >
-            Ahmed Abdelgwad
+            Hamza Ramadan
             <span className="block text-transparent bg-clip-text bg-gradient-to-r from-yellow-400 to-orange-400">
-              Hassan Gaber
+              AboElsoud
             </span>
           </motion.h1>
 
@@ -132,7 +83,7 @@ const Home = () => {
             transition={{ duration: 0.8, delay: 0.2 }}
             className="text-2xl md:text-3xl mb-8 text-gray-100"
           >
-            Frontend Developer & React Specialist
+            Frontend Developer & React & Next
           </motion.p>
 
           <motion.p
@@ -141,8 +92,9 @@ const Home = () => {
             transition={{ duration: 0.8, delay: 0.4 }}
             className="text-lg md:text-xl mb-12 max-w-3xl mx-auto text-gray-200"
           >
-            Creating beautiful, responsive web applications with modern technologies. 
-            Passionate about delivering exceptional user experiences.
+            Creating beautiful, responsive web applications with modern
+            technologies. Passionate about delivering exceptional user
+            experiences.
           </motion.p>
 
           <motion.div
@@ -192,9 +144,10 @@ const Home = () => {
               About Me
             </h2>
             <p className="text-xl text-gray-600 dark:text-gray-400 max-w-3xl mx-auto mb-12">
-              Frontend Developer with 1+ years of experience specializing in React.js, Firebase, 
-              and modern web technologies. I'm passionate about building responsive, user-friendly 
-              applications including dashboards and AI-powered tools.
+              Frontend Developer with 1+ years of experience specializing in
+              React.js, and modern web technologies. I'm passionate about
+              building responsive, user-friendly applications including
+              dashboards and AI-powered tools.
             </p>
           </motion.div>
 
@@ -244,7 +197,7 @@ const Home = () => {
                   🚀 Specialization
                 </h4>
                 <p className="text-gray-600 dark:text-gray-400">
-                  React.js, Firebase, Dashboards, AI Tools
+                  React.js, Next.js, JavaScript
                 </p>
               </div>
               <div className="card">
@@ -274,7 +227,8 @@ const Home = () => {
               Services
             </h2>
             <p className="text-xl text-gray-600 dark:text-gray-400 max-w-3xl mx-auto">
-              I offer a range of frontend development services to help bring your ideas to life.
+              I offer a range of frontend development services to help bring
+              your ideas to life.
             </p>
           </motion.div>
 
@@ -303,47 +257,7 @@ const Home = () => {
         </div>
       </section>
 
-      {/* Contact Options Section */}
-      <section className="py-20 bg-white dark:bg-gray-900">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.8 }}
-          >
-            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-8">
-              Let's Connect
-            </h2>
-            <p className="text-xl text-gray-600 dark:text-gray-400 mb-12">
-              Ready to start your next project? Get in touch with me through your preferred platform.
-            </p>
-
-            <div className="flex flex-col sm:flex-row gap-6 justify-center">
-              {socialLinks.map((social, index) => (
-                <motion.a
-                  key={social.name}
-                  href={social.url}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  initial={{ opacity: 0, y: 30 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ duration: 0.8, delay: index * 0.2 }}
-                  whileHover={{ scale: 1.05 }}
-                  className={`flex items-center space-x-3 px-8 py-4 rounded-full text-white font-bold text-lg transition-all ${social.color}`}
-                >
-                  <social.icon size={24} />
-                  <span>{social.name}</span>
-                </motion.a>
-              ))}
-            </div>
-          </motion.div>
-        </div>
-      </section>
-
-      {/* Clients Feedback Section */}
-      <section className="py-20 bg-gray-50 dark:bg-gray-800">
+      {/* <section className="py-20 bg-gray-50 dark:bg-gray-800">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -353,51 +267,18 @@ const Home = () => {
             className="text-center mb-16"
           >
             <h2 className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-8">
-              Client Feedback
+              My Projects
             </h2>
             <p className="text-xl text-gray-600 dark:text-gray-400 max-w-3xl mx-auto">
-              What my clients say about working with me.
+              I offer a range of frontend development services to help bring your ideas to life.
             </p>
           </motion.div>
-
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {testimonials.map((testimonial, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, y: 50 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.8, delay: index * 0.1 }}
-                className="card relative"
-              >
-                <FaQuoteLeft className="text-primary-600 text-2xl mb-4" />
-                <p className="text-gray-600 dark:text-gray-400 mb-6 italic">
-                  "{testimonial.opinion}"
-                </p>
-                <div className="flex items-center">
-                  <img
-                    src={testimonial.image}
-                    alt={testimonial.name}
-                    className="w-12 h-12 rounded-full mr-4 object-cover"
-                  />
-                  <div>
-                    <h4 className="font-bold text-gray-900 dark:text-white">
-                      {testimonial.name}
-                    </h4>
-                    <p className="text-sm text-gray-500 dark:text-gray-400">
-                      {testimonial.country}
-                    </p>
-                  </div>
-                </div>
-              </motion.div>
-            ))}
+<Main/>
           </div>
-        </div>
-      </section>
-
+          </section> */}
       <Footer />
     </PageWrapper>
-  )
-}
+  );
+};
 
-export default Home 
+export default Home;

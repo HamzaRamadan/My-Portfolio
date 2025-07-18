@@ -8,25 +8,25 @@ const Footer = () => {
     {
       name: 'GitHub',
       icon: FaGithub,
-      url: 'https://github.com/AhmedAbdElgwadHassan19',
+      url: 'https://github.com/HamzaRamadan',
       color: 'hover:text-gray-800 dark:hover:text-gray-200'
     },
     {
       name: 'LinkedIn',
       icon: FaLinkedin,
-      url: 'https://www.linkedin.com/in/ahmed-abdelgwad-439133305',
+      url: 'https://www.linkedin.com/in/hamza-ramadan-85320a240/',
       color: 'hover:text-blue-600'
     },
     {
       name: 'WhatsApp',
       icon: FaWhatsapp,
-      url: 'https://wa.me/201201302871',
+      url: 'https://wa.me/201090032086',
       color: 'hover:text-green-600'
     },
     {
       name: 'Facebook',
       icon: FaFacebook,
-      url: 'http://facebook.com/CodeCrestDesign',
+      url: 'https://www.facebook.com/hamza.ramadan.1650',
       color: 'hover:text-blue-800'
     }
   ]
@@ -44,7 +44,7 @@ const Footer = () => {
           {/* About Section */}
           <div>
             <h3 className="text-2xl font-bold bg-gradient-to-r from-primary-400 to-purple-400 bg-clip-text text-transparent mb-4">
-              Ahmed Hassan
+              Hamza Ramadan
             </h3>
             <p className="text-gray-400 mb-4">
               Frontend Developer passionate about creating beautiful, responsive web applications 
@@ -87,16 +87,17 @@ const Footer = () => {
           <div>
             <h4 className="text-lg font-semibold mb-4">Get In Touch</h4>
             <div className="space-y-2 text-gray-400">
-              <p>📧 ahmed.a.h.gaber@gmail.com</p>
-              <p>📱 20+1201302871</p>
-              <p>📍 Alexandria, Egypt</p>
+              <p>📧 hamzaramdan789@gmail.com</p>
+              <p>📱 (+20) 01090032086 </p>
+              <p>📍 Cairo, Egypt </p>
+               
             </div>
           </div>
         </div>
 
         <div className="border-t border-gray-800 mt-8 pt-8 text-center">
           <p className="text-gray-400 flex items-center justify-center">
-            Made with <FaHeart className="text-red-500 mx-2" /> by Ahmed Abdelgwad Hassan Gaber
+            Made with <FaHeart className="text-red-500 mx-2" /> by Hamza Ramadan
           </p>
           <p className="text-gray-500 text-sm mt-2">
             © {new Date().getFullYear()} All rights reserved.

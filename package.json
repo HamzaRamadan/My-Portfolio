@@ -1,5 +1,5 @@
 {
-  "name": "ahmed-portfolio-fullstack",
+  "name": "Hamza-portfolio",
   "private": true,
   "version": "0.0.0",
   "type": "module",
@@ -10,6 +10,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@mui/icons-material": "^7.1.2",
     "axios": "^1.9.0",
     "framer-motion": "^12.12.1",
     "react": "^19.1.0",

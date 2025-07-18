@@ -3,8 +3,7 @@ import { motion } from 'framer-motion'
 import { FaPlus, FaEdit, FaTrash, FaSave, FaTimes } from 'react-icons/fa'
 import PageWrapper from '../components/PageWrapper'
 import ProjectCard from '../components/ProjectCard'
-import { useAdmin } from '../context/AdminContext'
-import { projectsAPI, adminAPI } from '../services/api'
+
 import { Link } from 'react-router-dom'
 
 const Admin = () => {
@@ -30,31 +29,7 @@ const Admin = () => {
     }
   }, [isAuthenticated])
 
-  const handleLogin = async (e) => {
-    e.preventDefault()
-    try {
-      setLoginError('')
-      const response = await adminAPI.login(password)
-      if (response.data.success) {
-        login(response.data.token)
-        setPassword('')
-      }
-    } catch (error) {
-      setLoginError('Invalid password')
-    }
-  }
 
-  const fetchProjects = async () => {
-    try {
-      setLoading(true)
-      const response = await projectsAPI.getAll()
-      setProjects(response.data)
-    } catch (error) {
-      console.error('Error fetching projects:', error)
-    } finally {
-      setLoading(false)
-    }
-  }
 
   const handleInputChange = (e) => {
     setFormData({

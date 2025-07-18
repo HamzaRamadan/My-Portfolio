@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import { motion } from 'framer-motion'
-import { FaEnvelope, FaPhone, FaMapMarkerAlt, FaWhatsapp, FaGithub, FaFacebook } from 'react-icons/fa'
+import { FaEnvelope, FaPhone, FaMapMarkerAlt,FaLinkedin, FaWhatsapp, FaGithub, FaFacebook } from 'react-icons/fa'
 import PageWrapper from '../components/PageWrapper'
 import Footer from '../components/Footer'
 
@@ -24,7 +24,7 @@ const Contact = () => {
     e.preventDefault()
     // Format WhatsApp message with line breaks
     const message = `Name: ${formData.name}%0APhone: ${formData.phone}%0AMessage: ${formData.message}`
-    const whatsappUrl = `https://wa.me/201201302871?text=${message}`
+    const whatsappUrl = `https://wa.me/201090032086?text=${message}`
     window.open(whatsappUrl, '_blank')
   }
 
@@ -32,19 +32,19 @@ const Contact = () => {
     {
       icon: FaEnvelope,
       label: 'Email',
-      value: 'ahmed.a.h.gaber@gmail.com',
-      link: 'mailto:ahmed.a.h.gaber@gmail.com'
+      value: 'hamzaramdan789@gmail.com',
+      link: 'mailto:hamzaramdan789@gmail.com'
     },
     {
       icon: FaPhone,
       label: 'Phone',
-      value: '+01201302871',
-      link: 'tel:+01201302871'
+      value: '+01090032086',
+      link: 'tel:+01090032086'
     },
     {
       icon: FaMapMarkerAlt,
       label: 'Location',
-      value: 'Alexandria, Egypt',
+      value: 'Cairo, Egypt',
       link: null
     }
   ]
@@ -53,21 +53,27 @@ const Contact = () => {
     {
       icon: FaWhatsapp,
       label: 'WhatsApp',
-      link: 'https://wa.me/201201302871',
+      link: 'https://wa.me/201090032086',
       color: 'text-green-600 hover:text-green-700'
     },
     {
       icon: FaFacebook,
       label: 'Facebook',
-      link: 'http://facebook.com/CodeCrestDesign',
+      link: 'https://www.facebook.com/hamza.ramadan.1650',
       color: 'text-blue-600 hover:text-blue-700'
     },
     {
       icon: FaGithub,
       label: 'GitHub',
-      link: 'https://github.com/AhmedAbdElgwadHassan19',
+      link: 'https://github.com/HamzaRamadan',
       color: 'text-gray-800 dark:text-gray-200 hover:text-gray-700 dark:hover:text-gray-300'
-    }
+    },
+        {
+          name: 'LinkedIn',
+          icon: FaLinkedin,
+          link: 'https://www.linkedin.com/in/hamza-ramadan-85320a240/',
+          color: 'hover:text-blue-600'
+        }
   ]
 
   return (
@@ -218,21 +224,7 @@ const Contact = () => {
                 </div>
               </div>
 
-              <div className="card bg-gradient-to-r from-primary-50 to-purple-50 dark:from-primary-900/20 dark:to-purple-900/20">
-                <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-4">
-                  Let's Build Something Great Together
-                </h3>
-                <p className="text-gray-600 dark:text-gray-400 mb-4">
-                  I'm passionate about creating exceptional web experiences. Whether you need a 
-                  React application, a stunning website, or a complex dashboard, I'm here to help.
-                </p>
-                <ul className="space-y-2 text-sm text-gray-600 dark:text-gray-400">
-                  <li>• Quick response within 24 hours</li>
-                  <li>• Free consultation</li>
-                  <li>• Competitive pricing</li>
-                  <li>• 100% satisfaction guarantee</li>
-                </ul>
-              </div>
+             
             </motion.div>
           </div>
         </div>
