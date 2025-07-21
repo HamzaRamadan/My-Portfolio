@@ -5,7 +5,7 @@ import { FaUser, FaProjectDiagram, FaEnvelope, FaCog, FaTimes, FaFileAlt } from 
 import { useTheme } from '../context/ThemeContext'
 import profileImage from '../assets/my-pic.jpeg'
 
-
+// تتتت
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false)
   const [showModal, setShowModal] = useState(false)
