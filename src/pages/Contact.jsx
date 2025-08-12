@@ -38,7 +38,7 @@ const Contact = () => {
     {
       icon: FaPhone,
       label: 'Phone',
-      value: '+01090032086',
+      value: '01090032086',
       link: 'tel:+01090032086'
     },
     {
