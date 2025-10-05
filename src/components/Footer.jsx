@@ -97,7 +97,7 @@ const Footer = () => {
 
         <div className="border-t border-gray-800 mt-8 pt-8 text-center">
           <p className="text-gray-400 flex items-center justify-center">
-            Made with <FaHeart className="text-red-500 mx-2" /> by Hamza Ramadan
+              by Hamza Ramadan
           </p>
           <p className="text-gray-500 text-sm mt-2">
             © {new Date().getFullYear()} All rights reserved.
