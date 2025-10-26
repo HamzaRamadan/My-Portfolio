@@ -3,7 +3,7 @@ import { motion } from 'framer-motion'
 import { FaDownload, FaEye } from 'react-icons/fa'
 import PageWrapper from '../components/PageWrapper'
 import Footer from '../components/Footer'
-import cvFile from '../assets/MyCv.pdf'
+import cvFile from '../assets/Hamza Frontend-Developer-cv.pdf.pdf'
 
 const CV = () => {
   return (
